@@ -38,20 +38,26 @@ export default function SalesPage() {
                 A strategic framework that teaches founders how to use AI with purpose, structure, and repeatable workflows - across strategy, marketing, systems, and execution.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button
-                  onClick={() => handleCheckout('bundle')}
-                  disabled={loading !== null}
-                  className="bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 cursor-pointer shadow-lg shadow-indigo-900/50"
-                >
-                  {loading === 'bundle' ? 'Loading...' : 'Get the Bundle - $47'}
-                </button>
-                <button
-                  onClick={() => handleCheckout('ebook')}
-                  disabled={loading !== null}
-                  className="border-2 border-indigo-400 hover:border-white disabled:opacity-60 text-indigo-200 hover:text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors cursor-pointer"
-                >
-                  {loading === 'ebook' ? 'Loading...' : 'Ebook Only - $37'}
-                </button>
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-indigo-400 text-sm line-through opacity-70">was $147</span>
+                  <button
+                    onClick={() => handleCheckout('bundle')}
+                    disabled={loading !== null}
+                    className="bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 cursor-pointer shadow-lg shadow-indigo-900/50"
+                  >
+                    {loading === 'bundle' ? 'Loading...' : 'Get the Bundle - $47'}
+                  </button>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <span className="text-indigo-400 text-sm line-through opacity-70">was $97</span>
+                  <button
+                    onClick={() => handleCheckout('ebook')}
+                    disabled={loading !== null}
+                    className="border-2 border-indigo-400 hover:border-white disabled:opacity-60 text-indigo-200 hover:text-white font-semibold px-8 py-4 rounded-xl text-lg transition-colors cursor-pointer"
+                  >
+                    {loading === 'ebook' ? 'Loading...' : 'Ebook Only - $37'}
+                  </button>
+                </div>
               </div>
               <p className="mt-4 text-indigo-400 text-sm">Instant digital delivery. Secure checkout via Stripe.</p>
             </div>
@@ -216,13 +222,16 @@ export default function SalesPage() {
                   </li>
                 ))}
               </ul>
-              <button
-                onClick={() => handleCheckout('bundle')}
-                disabled={loading !== null}
-                className="bg-[#1e1b4b] hover:bg-indigo-800 disabled:opacity-60 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 cursor-pointer shadow-lg w-full text-center"
-              >
-                {loading === 'bundle' ? 'Loading...' : 'Get the Ebook + Bundle - $47'}
-              </button>
+              <div className="flex flex-col items-center gap-1">
+                <span className="text-gray-400 text-sm line-through opacity-70">was $147</span>
+                <button
+                  onClick={() => handleCheckout('bundle')}
+                  disabled={loading !== null}
+                  className="bg-[#1e1b4b] hover:bg-indigo-800 disabled:opacity-60 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all hover:scale-105 cursor-pointer shadow-lg w-full text-center"
+                >
+                  {loading === 'bundle' ? 'Loading...' : 'Get the Ebook + Bundle - $47'}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -320,13 +329,16 @@ export default function SalesPage() {
         <div className="max-w-2xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-4">Ready to build with your AI Co-Founder?</h2>
           <p className="text-indigo-200 mb-8">Instant delivery. Start applying the method today.</p>
-          <button
-            onClick={() => handleCheckout('bundle')}
-            disabled={loading !== null}
-            className="bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 text-white font-bold px-10 py-4 rounded-xl text-lg transition-all hover:scale-105 cursor-pointer shadow-lg shadow-indigo-900/50"
-          >
-            {loading === 'bundle' ? 'Loading...' : 'Get the Ebook + Bundle - $47'}
-          </button>
+          <div className="flex flex-col items-center gap-1">
+            <span className="text-indigo-400 text-sm line-through opacity-70">was $147</span>
+            <button
+              onClick={() => handleCheckout('bundle')}
+              disabled={loading !== null}
+              className="bg-indigo-500 hover:bg-indigo-400 disabled:opacity-60 text-white font-bold px-10 py-4 rounded-xl text-lg transition-all hover:scale-105 cursor-pointer shadow-lg shadow-indigo-900/50"
+            >
+              {loading === 'bundle' ? 'Loading...' : 'Get the Ebook + Bundle - $47'}
+            </button>
+          </div>
         </div>
       </section>
 
