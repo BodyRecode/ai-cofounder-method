@@ -37,7 +37,7 @@ export async function POST(req: NextRequest) {
     const accessUrl = `${appUrl}/access/${accessToken}`
 
     await getResend().emails.send({
-      from: 'Kade Dunstone <onboarding@resend.dev>',
+      from: 'Kade Dunstone <kade@aicofoundermethod.com>',
       to: email,
       subject: 'Your AI Co-Founder Method is ready',
       html: buildEmail(accessUrl, productType),
