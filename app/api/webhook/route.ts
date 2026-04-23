@@ -53,34 +53,34 @@ function buildEmail(accessUrl: string, productType: 'ebook' | 'bundle') {
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"></head>
-<body style="margin:0;padding:0;background:#0a0a0a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0a0a0a;padding:40px 20px;">
+<body style="margin:0;padding:0;background:#f0efff;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f0efff;padding:40px 20px;">
     <tr><td align="center">
-      <table width="600" cellpadding="0" cellspacing="0" style="background:#111111;border-radius:12px;overflow:hidden;max-width:600px;width:100%;">
+      <table width="600" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;overflow:hidden;max-width:600px;width:100%;border:1px solid #e0e7ff;">
         <tr>
-          <td style="background:#1e1b4b;padding:32px 40px;text-align:center;">
-            <p style="color:#a5b4fc;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;margin:0 0 12px;">The AI Co-Founder Method</p>
-            <h1 style="color:#ffffff;font-size:24px;font-weight:700;margin:0;">Your order is ready</h1>
+          <td style="background:linear-gradient(135deg,#1e1b4b,#3730a3);padding:36px 40px;text-align:center;">
+            <p style="color:#a5b4fc;font-size:11px;font-weight:700;letter-spacing:3px;text-transform:uppercase;margin:0 0 12px;">The AI Co-Founder Method</p>
+            <h1 style="color:#ffffff;font-size:26px;font-weight:700;margin:0;">Your order is ready</h1>
           </td>
         </tr>
         <tr>
-          <td style="padding:40px;">
-            <p style="color:#d1d5db;font-size:16px;line-height:1.6;margin:0 0 16px;">Thank you for your purchase.</p>
-            <p style="color:#d1d5db;font-size:16px;line-height:1.6;margin:0 0 24px;">
-              Your ${isBundle ? 'Ebook + Bonus Templates Bundle' : 'Ebook'} is ready to access now. Click the button below to go to your personal download page.
+          <td style="padding:40px;background:#ffffff;">
+            <p style="color:#374151;font-size:16px;line-height:1.7;margin:0 0 16px;">Thank you for your purchase.</p>
+            <p style="color:#374151;font-size:16px;line-height:1.7;margin:0 0 28px;">
+              Your <strong>${isBundle ? 'Ebook + Bonus Templates Bundle' : 'Ebook'}</strong> is ready to access now. Click the button below to go to your personal download page.
             </p>
             <div style="text-align:center;margin:32px 0;">
-              <a href="${accessUrl}" style="display:inline-block;background:#4f46e5;color:#ffffff;font-size:16px;font-weight:600;text-decoration:none;padding:14px 32px;border-radius:8px;">Access Your Downloads</a>
+              <a href="${accessUrl}" style="display:inline-block;background:#4338ca;color:#ffffff;font-size:16px;font-weight:700;text-decoration:none;padding:16px 36px;border-radius:12px;">Access Your Downloads</a>
             </div>
-            <p style="color:#6b7280;font-size:14px;line-height:1.6;margin:0 0 8px;">Your access link:</p>
-            <p style="color:#818cf8;font-size:13px;word-break:break-all;margin:0 0 32px;">${accessUrl}</p>
-            <hr style="border:none;border-top:1px solid #222;margin:0 0 24px;">
-            <p style="color:#6b7280;font-size:13px;line-height:1.6;margin:0;">Bookmark your access link - you can return to it anytime to re-download your files or access your templates.</p>
+            <p style="color:#6b7280;font-size:13px;line-height:1.6;margin:24px 0 6px;">Your personal access link:</p>
+            <p style="color:#4338ca;font-size:12px;word-break:break-all;margin:0 0 32px;background:#eef2ff;padding:12px 16px;border-radius:8px;">${accessUrl}</p>
+            <hr style="border:none;border-top:1px solid #e5e7eb;margin:0 0 24px;">
+            <p style="color:#9ca3af;font-size:13px;line-height:1.6;margin:0;">Bookmark your access link - you can return to it anytime to re-download your files or access your templates.</p>
           </td>
         </tr>
         <tr>
-          <td style="padding:24px 40px;border-top:1px solid #222;text-align:center;">
-            <p style="color:#6b7280;font-size:12px;margin:0;">© 2025 Kade Dunstone. The AI Co-Founder Method.</p>
+          <td style="padding:20px 40px;border-top:1px solid #f3f4f6;text-align:center;background:#fafafa;">
+            <p style="color:#9ca3af;font-size:12px;margin:0;">© 2025 Kade Dunstone. The AI Co-Founder Method.</p>
           </td>
         </tr>
       </table>
