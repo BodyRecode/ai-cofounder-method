@@ -238,6 +238,7 @@ export default function SalesPage() {
             <div className="bg-white rounded-2xl border-2 border-gray-200 p-8 hover:border-indigo-200 transition-colors">
               <h3 className="font-bold text-xl text-[#1e1b4b] mb-2">The Ebook</h3>
               <div className="flex items-end gap-2 mb-1">
+                <span className="text-lg text-gray-400 line-through mb-2">$97</span>
                 <span className="text-5xl font-bold text-[#1e1b4b]">$37</span>
                 <span className="text-gray-400 mb-2">AUD</span>
               </div>
@@ -271,6 +272,7 @@ export default function SalesPage() {
               <div className="absolute top-4 right-4 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-full">Best Value</div>
               <h3 className="font-bold text-xl text-white mb-2">Ebook + Bundle</h3>
               <div className="flex items-end gap-2 mb-1">
+                <span className="text-lg text-indigo-400 line-through mb-2">$147</span>
                 <span className="text-5xl font-bold text-white">$47</span>
                 <span className="text-indigo-300 mb-2">AUD</span>
               </div>
