@@ -30,9 +30,6 @@ export default function SalesPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             {/* Left - Copy */}
             <div>
-              <div className="inline-block bg-indigo-500 text-white text-xs font-bold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
-                GPT-4 Edition
-              </div>
               <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
                 Stop using ChatGPT like a tool.<br />
                 <span className="text-indigo-300">Start using it like a co-founder.</span>
