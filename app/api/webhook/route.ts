@@ -42,6 +42,13 @@ export async function POST(req: NextRequest) {
       subject: 'Your AI Co-Founder Method is ready',
       html: buildEmail(accessUrl, productType),
     })
+
+    await getResend().emails.send({
+      from: 'AI Co-Founder Method <kade@aicofoundermethod.com>',
+      to: 'kade.dunstone@gmail.com',
+      subject: `New sale - ${productType === 'bundle' ? 'Ebook + Bundle ($47)' : 'Ebook ($37)'}`,
+      html: `<p style="font-family:sans-serif;font-size:16px;color:#111;">New purchase from <strong>${email}</strong><br>Product: <strong>${productType === 'bundle' ? 'Ebook + Bundle - $47' : 'Ebook - $37'}</strong></p>`,
+    })
   }
 
   return Response.json({ ok: true })
