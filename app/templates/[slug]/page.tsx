@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { getTemplate } from '@/lib/templates'
 import CopyButton from './CopyButton'
+import PrintButton from './PrintButton'
 
 type Props = {
   params: Promise<{ slug: string }>
@@ -112,12 +113,7 @@ export default async function TemplatePage({ params, searchParams }: Props) {
 
         {/* Print button */}
         <div className="mt-12 pt-8 border-t border-gray-100 flex gap-4 no-print">
-          <button
-            onClick={() => window.print()}
-            className="border border-gray-300 hover:border-gray-400 text-gray-600 hover:text-gray-800 font-medium px-6 py-3 rounded-lg text-sm transition-colors cursor-pointer"
-          >
-            Print / Save as PDF
-          </button>
+          <PrintButton />
           {token && (
             <Link
               href={`/access/${token}`}
